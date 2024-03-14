@@ -1,4 +1,4 @@
-package com.app.mulba.member.type;
+package com.app.mulba.member.domain.type;
 
 public enum InterestType {
     BackEnd, FrontEnd, Android, IOS, AI, BigData, Cloud, Security,

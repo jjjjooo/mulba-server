@@ -1,6 +1,10 @@
 package com.app.mulba.member.domain;
 
 import com.app.mulba.common.domain.BaseEntity;
+import com.app.mulba.member.domain.vo.Email;
+import com.app.mulba.member.domain.vo.Money;
+import com.app.mulba.member.domain.vo.Nickname;
+import com.app.mulba.member.domain.vo.Tear;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;

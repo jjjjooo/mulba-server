@@ -1,6 +1,6 @@
-package com.app.mulba.member.domain;
+package com.app.mulba.member.domain.vo;
 
-import com.app.mulba.member.type.TearType;
+import com.app.mulba.member.domain.type.TearType;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

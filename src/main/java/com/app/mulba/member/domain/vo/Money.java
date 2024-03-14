@@ -1,4 +1,4 @@
-package com.app.mulba.member.domain;
+package com.app.mulba.member.domain.vo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

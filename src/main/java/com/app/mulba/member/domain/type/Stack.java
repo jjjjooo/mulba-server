@@ -1,4 +1,4 @@
-package com.app.mulba.member.type;
+package com.app.mulba.member.domain.type;
 
 public enum Stack {
     Java, JavaScript, Python, C, Cpp, CSharp, Kotlin, Swift, Go, Ruby, PHP,
