@@ -25,6 +25,7 @@ public class Member extends BaseEntity {
     @Embedded private Email email;
     @Embedded private Tear tear;
     @Embedded private Money money;
+    private Boolean isWithdraw;
 
     @Builder // 테스트 빌더
     private Member(Long id, Nickname nickname, Email email, Tear tear, Money money) {
