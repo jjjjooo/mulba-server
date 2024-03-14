@@ -1,5 +1,6 @@
 package com.app.mulba.member.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,17 +12,18 @@ public class Nickname {
 
     private static final String USERNAME_REGEX = "^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]{4,12}$";
 
+    @Column(name = "nickname", nullable = false, unique = true, length = 12)
     private String nickname;
 
-    private Nickname(String nickname ) {
+    private Nickname(String nickname) {
         this.nickname = nickname;
     }
 
-    public static Nickname create(String phoneNumber) {
-        return new Nickname(phoneNumber);
+    public static Nickname create(String nickname) {
+        return new Nickname(nickname);
     }
 
     private static boolean validateNickname(String nickname) {
-        return nickname.matches(USERNAME_REGEX);
+        return nickname != null && nickname.matches(USERNAME_REGEX);
     }
 }

@@ -1,5 +1,6 @@
 package com.app.mulba.member.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -12,6 +13,8 @@ import lombok.NoArgsConstructor;
 public class Email {
 
     private static final String EMAIL_REGEX = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+
+    @Column(name = "email", nullable = false, unique = true, length = 50)
     private String email;
 
     private Email(String email) {
@@ -19,7 +22,7 @@ public class Email {
     }
 
     private static boolean validateEmail(String email) {
-        return email.matches(EMAIL_REGEX);
+        return email != null && email.matches(EMAIL_REGEX);
     }
 
     public static Email create(String email) {
