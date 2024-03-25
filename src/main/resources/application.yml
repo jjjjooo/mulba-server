@@ -26,6 +26,24 @@ spring:
       max-file-size: 10MB
       max-request-size: 100MB
 
+kakao:
+  client:
+    id: 0bb8b2467b95230fe1f9b959758428b1
+    secret: BihBWJYa4dMxrrVNeXaLKrcnsjWtmrN7
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 500
+
 logging:
   level:
     org.hibernate.type: trace  # ? ??? ??? ??
+    com.app: debug
+
+token:
+  secret: tempString
+  access-token-expiration-time: 900000
+  refresh-token-expiration-time: 1209600000

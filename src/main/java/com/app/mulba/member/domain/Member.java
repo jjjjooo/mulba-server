@@ -1,6 +1,7 @@
 package com.app.mulba.member.domain;
 
 import com.app.mulba.common.domain.BaseEntity;
+import com.app.mulba.member.domain.type.SocialType;
 import com.app.mulba.member.domain.vo.Email;
 import com.app.mulba.member.domain.vo.Money;
 import com.app.mulba.member.domain.vo.Nickname;
@@ -25,6 +26,10 @@ public class Member extends BaseEntity {
     @Embedded private Email email;
     @Embedded private Tear tear;
     @Embedded private Money money;
+
+    @Enumerated(EnumType.STRING)
+    SocialType socialType;
+
     private Boolean isWithdraw;
 
     @Builder // 테스트 빌더
