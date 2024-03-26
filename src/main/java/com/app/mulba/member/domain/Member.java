@@ -39,4 +39,8 @@ public class Member extends BaseEntity {
     public static Member create(Nickname nickname, Email email, Tear tear, Money money) {
         return new Member(null, nickname, email, tear, money);
     }
+
+    public static Member create(Nickname nickname, Email email) {
+        return new Member(null, nickname, email, null, null);
+    }
 }
